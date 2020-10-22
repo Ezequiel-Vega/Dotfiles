@@ -1,0 +1,25 @@
+snippet ifmain
+def $1():
+    pass
+
+if __name__ == '__main__':
+    ${1:main}()
+endsnippet
+
+snippet route
+@app.route('/${1:name_function}')
+def $1():
+    pass
+endsnippet
+
+snippet routep
+@app.route('/${1:name_function}', methods=['POST'])
+def $1():
+    pass
+endsnippet
+
+snippet routegp
+@app.route('/${1:name_function}', methods=['GET', 'POST'])
+def $1():
+    pass
+endsnippet
