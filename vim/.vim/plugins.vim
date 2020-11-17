@@ -7,6 +7,7 @@ Plug 'joshdick/onedark.vim'
 " Files
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " GIT
