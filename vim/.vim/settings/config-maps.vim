@@ -9,3 +9,12 @@ nmap <Leader>t :10Term<CR>
 nmap <Leader>e :FZF<CR>
 nmap <Leader>ef :FZF ~<CR>
 :imap ii <Esc>
+
+" Autocompletado de parentesis, llaves, corchetes, etc.
+inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap {<CR> {<CR>}<Esc>O
+inoremap [ []<Esc>i
+inoremap < <><Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
