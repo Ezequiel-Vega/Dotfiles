@@ -10,7 +10,9 @@ let g:coc_global_extensions = [
 	\ 'coc-sql', 
 	\ 'coc-python',
 	\ 'coc-tsserver',
-	\ 'coc-eslint'
+	\ 'coc-eslint',
+	\ 'coc-css',
+	\ 'coc-html'
 	\ ]
 " Config syntax for lenguage
 command! -nargs=0 Prettier :CocCommand prettier.formatFile

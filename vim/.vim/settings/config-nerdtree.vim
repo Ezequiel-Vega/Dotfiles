@@ -1,26 +1,31 @@
-" NerdTree Colors
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
-
-call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('md', 'Magenta', 'none', '#ff00ff', '#151515')
-call NERDTreeHighlightFile('py', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('yml', 'Magenta', 'none', '#ff00ff', '#151515')
-call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('json', 'green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('html', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('js', 'yellow', 'none', 'yellow', '#151515')
-
 " Setting NerdrTree
 let NERDTreeQuitOnOpen = 1
+let NERDTreeShowHidden = 1
 let g:NERDTreeIgnore = [
 	\ '^node_modules',
 	\ '__pycache__',
 	\ '.pytest_cache'
 	\ ]
+let g:NERDTreeFileExtensionHighlightFullName = 1
 
+" Colores
+let s:aqua =  "3AFFDB"
+let s:blue = "2E9E97"
+let s:purple = "834F79"
+let s:red = "AE403F"
+let s:yellow = "F09F17"
+let s:pink = "CB6F6F"
+let s:green = "8FAA54"
+let s:git_orange = 'F54D27'
+
+" Agregar colores a los archivos
+let g:NERDTreeExtensionHighlightColor = {}
+let g:NERDTreeExtensionHighlightColor['py'] = s:blue
+let g:NERDTreeExtensionHighlightColor['md'] = s:pink
+let g:NERDTreeExtensionHighlightColor['yml'] = s:purple
+let g:NERDTreeExtensionHighlightColor['json'] = s:green
+let g:NERDTreeExtensionHighlightColor['html'] = s:red
+let g:NERDTreeExtensionHighlightColor['css'] = s:aqua
+let g:NERDTreeExtensionHighlightColor['js'] = s:yellow
+let g:NERDTreeExtensionHighlightColor['ts'] = s:aqua
+let g:NERDTreeExtensionHighlightColor['.gitignore'] = s:git_orange
