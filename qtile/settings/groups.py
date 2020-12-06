@@ -7,11 +7,13 @@ from settings.keys import keys
 
 "Nombre de los grupos"
 groups = [Group(i) for i in [
-        "dev",
-        "nav",
-        "term",
-        "rec",
-        "tw"
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
     ]
 ]
 

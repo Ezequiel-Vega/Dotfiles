@@ -57,7 +57,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
         ([mod], "Return", lazy.spawn("alacritty")),
 
         # Captura de pantalla
-        ([mod], "s", lazy.spawn("scrot")),
+        ([mod], "c", lazy.spawn("scrot")),
 
         # VS Code
         ([mod], "v", lazy.spawn("code")),
@@ -68,10 +68,15 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
         # OBS
         ([mod], "o", lazy.spawn("obs")),
 
+        ([mod], "p", lazy.spawn("postman")),
+
         # Steam
-        ([mod], "s", lazy.spawn("steam")),
+        ([mod, "shift"], "s", lazy.spawn("steam")),
 
         # Lutris
-        ([mod], "u", lazy.spawn("lutris"))
+        ([mod], "u", lazy.spawn("lutris")),
+
+        # Slack
+        ([mod], "s", lazy.spawn("slack"))
     ]
 ]

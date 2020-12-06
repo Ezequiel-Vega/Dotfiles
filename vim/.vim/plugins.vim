@@ -34,6 +34,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'posva/vim-vue'
 Plug 'vimlab/split-term.vim'
 Plug 'tasn/vim-tsx'
+Plug 'epilande/vim-es2015-snippets'
+Plug 'epilande/vim-react-snippets'
 Plug 'leafgarland/typescript-vim'
 
 call plug#end()

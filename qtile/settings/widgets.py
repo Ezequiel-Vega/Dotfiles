@@ -64,19 +64,19 @@ primary_widgets = [
 
     powerline('color4', 'dark'),
 
-    icon(bg="color4", text=''), # Icon: fa-download
+    icon(bg="color4", text=''),
     
     widget.Pacman(**base(bg='color4'), update_interval=1800),
 
     #powerline('color3', 'color4'),
 
-    #icon(bg="color3", text=' '),  # Icon: fa-wifi
+    #icon(bg="color3", text=' '),
     
     #widget.Net(**base(bg='color3'), interface='wlp2s0b1', format= '{down}   {up}'),
 
     powerline('color1', 'color4'),
 
-    icon(bg="color1", fontsize=17, text=''), # Icon: fa-calendar 
+    icon(bg="color1", fontsize=17, text=''), 
 
     widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %H:%M '),
 
