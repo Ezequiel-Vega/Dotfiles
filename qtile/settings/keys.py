@@ -65,6 +65,9 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
         # Droidcam
         ([mod], "d", lazy.spawn("droidcam")),
 
+        # Discord
+        ([mod, "shift"], "d", lazy.spawn("discord-canary")),
+
         # OBS
         ([mod], "o", lazy.spawn("obs")),
 
