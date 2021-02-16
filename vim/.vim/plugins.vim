@@ -2,12 +2,13 @@ call plug#begin('~/.vim/plugged')
 
 " Themes
 Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim'
+Plug 'ErichDonGubler/vim-sublime-monokai'
+Plug 'eduardoHoefel/matrix.vim'
 
 " Files
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons' 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " GIT
@@ -34,8 +35,15 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'posva/vim-vue'
 Plug 'vimlab/split-term.vim'
 Plug 'tasn/vim-tsx'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'mxw/vim-jsx'
+Plug 'elzr/vim-json'
+Plug 'pangloss/vim-javascript'
+Plug 'crusoexia/vim-javascript-lib'
 Plug 'epilande/vim-es2015-snippets'
 Plug 'epilande/vim-react-snippets'
 Plug 'leafgarland/typescript-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'vim-python/python-syntax'
 
 call plug#end()

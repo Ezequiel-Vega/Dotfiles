@@ -17,5 +17,8 @@ let g:coc_global_extensions = [
 " Config syntax for lenguage
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+" Python
+let g:python_highlight_all = 1
+
 " VUE
 let g:vue_pre_processors = ['pug', 'scss', 'typescript', 'handlebars', 'HTML', 'CSS', 'JavaScript']

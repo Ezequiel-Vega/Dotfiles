@@ -1,0 +1,9 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "html",
+    "js",
+    "css",
+    "python",
+    "markdown"
+  ]
+}

@@ -1,6 +1,7 @@
 # Qtiles configuraciones de los Widgets
 from libqtile import widget
 from settings.theme import colors
+from settings.networking import network
 
 # Funcion para el color base
 base = lambda fg='text', bg='dark': {
@@ -16,15 +17,15 @@ icon = lambda fg='text', bg='dark', fontsize=16, text="?": widget.TextBox(
     **base(fg, bg),
     fontsize=fontsize,
     text=text,
-    padding=3
+    padding=12
 )
 
 # Funcion para la PawerLine
 powerline = lambda fg="light", bg="dark": widget.TextBox(
    **base(fg, bg),
     text="", # Icon: fa-caret-left
-    fontsize=40,
-    padding=-1
+    fontsize=44,
+    padding=-5
 )
 
 # Funciones para los espacios de trabajo
@@ -33,11 +34,11 @@ workspaces = lambda: [
     widget.GroupBox(
         **base(fg='light'),
         font='UbuntuMono Nerd Font',
-        fontsize=12,
+        fontsize=14,
         margin_y=3,
         margin_x=0,
-        padding_y=8,
-        padding_x=5,
+        padding_y=3,
+        padding_x=6,
         borderwidth=1,
         active=colors['active'],
         inactive=colors['inactive'],
@@ -62,19 +63,19 @@ primary_widgets = [
 
     separator(),
 
-    powerline('color4', 'dark'),
+    powerline('color3', 'dark'),
 
-    icon(bg="color4", text=''),
+    #icon(bg="color4", text=''),
     
-    widget.Pacman(**base(bg='color4'), update_interval=1800),
+    #widget.Pacman(**base(bg='color4'), update_interval=1800),
 
     #powerline('color3', 'color4'),
 
-    #icon(bg="color3", text=' '),
+    icon(bg="color3", text=network['icon']),
     
-    #widget.Net(**base(bg='color3'), interface='wlp2s0b1', format= '{down}   {up}'),
+    widget.Net(**base(bg='color3'), interface=network['interface'], format= '{down}   {up}'),
 
-    powerline('color1', 'color4'),
+    powerline('color1', 'color3'),
 
     icon(bg="color1", fontsize=17, text=''), 
 
@@ -97,7 +98,13 @@ secondary_widgets = [
 
     separator(),
 
-    powerline('color2', 'dark'),
+    powerline('color1', 'dark'),
+
+    icon(bg="color1", fontsize=17, text=''), 
+
+    widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %H:%M '),
+
+    powerline('color2', 'color1'), 
 
     widget.CurrentLayoutIcon(**base(bg='color2'), scale=0.65),
 
@@ -106,7 +113,7 @@ secondary_widgets = [
 
 widget_defaults = {
     'font': 'UbuntuMono Nerd Font',
-    'fontsize': 10,
+    'fontsize': 12,
     'padding': 1,
 }
 extension_defaults = widget_defaults.copy()

@@ -9,6 +9,7 @@ so ~/.vim/settings/config-nerdtree.vim
 so ~/.vim/settings/config-syntax.vim
 so ~/.vim/settings/config-snippets.vim
 so ~/.vim/settings/config-maps.vim
+so ~/.vim/settings/config-ide.vim
 
 " Setting base
 set number
@@ -25,9 +26,7 @@ set expandtab
 set nowrap
 set noshowmode
 syntax enable
-
-
 " Themes
 colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
-let t_Co=256
+
+so ~/.vim/settings/config-theme.vim

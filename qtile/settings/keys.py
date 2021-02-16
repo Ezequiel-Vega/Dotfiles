@@ -49,35 +49,18 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
         # Buscador web
         ([mod], "b", lazy.spawn("google-chrome-stable")),
-
-        # Explorador de archivos
-        ([mod], "e", lazy.spawn("thunar")),
-
+ 
         # Terminal
         ([mod], "Return", lazy.spawn("alacritty")),
 
         # Captura de pantalla
         ([mod], "c", lazy.spawn("scrot")),
 
-        # VS Code
-        ([mod], "v", lazy.spawn("code")),
-
-        # Droidcam
-        ([mod], "d", lazy.spawn("droidcam")),
-
         # Discord
-        ([mod, "shift"], "d", lazy.spawn("discord-canary")),
+        ([mod], "d", lazy.spawn("discord-canary")),
 
         # OBS
         ([mod], "o", lazy.spawn("obs")),
-
-        ([mod], "p", lazy.spawn("postman")),
-
-        # Steam
-        ([mod, "shift"], "s", lazy.spawn("steam")),
-
-        # Lutris
-        ([mod], "u", lazy.spawn("lutris")),
 
         # Slack
         ([mod], "s", lazy.spawn("slack"))
