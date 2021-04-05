@@ -103,7 +103,23 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v="nvim"
+alias e="ranger"
+alias r="gio trash"
 
+# Node Version Manager(NVM)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# GO
+export GOPATH=/home/zetta/go
+export GOBIN=$GOPATH/bin
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOBIN:$GOROOT/bin
+export GO111MODULE='on'
+
+# .Net(C#)
+export PATH="$PATH:/home/[[USER_NAME]]/.dotnet/tools"
+
+# Ligthline
+export TERM=xterm-256color

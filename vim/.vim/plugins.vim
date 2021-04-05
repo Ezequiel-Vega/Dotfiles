@@ -1,9 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Themes
-Plug 'morhetz/gruvbox'
-Plug 'ErichDonGubler/vim-sublime-monokai'
-Plug 'eduardoHoefel/matrix.vim'
+Plug 'artanikin/vim-synthwave84'
 
 " Files
 Plug 'scrooloose/nerdtree'
@@ -21,8 +19,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'christoomey/vim-tmux-navigator'
 
 " Status Bar
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
+
+" Tabs Buffer
+Plug 'zefei/vim-wintabs'
+Plug 'zefei/vim-wintabs-powerline'
 
 " Typing
 Plug 'alvan/vim-closetag'
@@ -45,5 +46,6 @@ Plug 'epilande/vim-react-snippets'
 Plug 'leafgarland/typescript-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'vim-python/python-syntax'
+Plug 'OmniSharp/omnisharp-vim'
 
 call plug#end()
