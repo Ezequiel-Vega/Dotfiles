@@ -5,8 +5,23 @@ from libqtile.command import lazy
 mod = "mod4"
 
 keys = [Key(key[0], key[1], *key[2:]) for key in [
-        # ------------ Configuracion de Ventanas ------------
+        # ------------ Configuracion de Pantalla ------------
+
+        # Brillo de la pantalla
+        ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
+        ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+
+        # ------------ Configuracion de Sonido ------------
+        ([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
+        ([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
+        ([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
         
+        ([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 5")),
+        ([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
+        ([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
+
+        # ------------ Configuracion de Ventanas ------------
+
         # Moverse entre las pestañas
         ([mod], "j", lazy.layout.down()),
         ([mod], "k", lazy.layout.up()),
@@ -37,6 +52,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
         # Resetear Qtile
         ([mod, "control"], "r", lazy.restart()),
+
         # Cerrar sesion
         ([mod, "control"], "q", lazy.shutdown()),
 
@@ -55,14 +71,20 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
         # Captura de pantalla
         ([mod], "c", lazy.spawn("scrot")),
+ 
+        # Telegram
+        ([mod], "t", lazy.spawn("telegram-desktop")),
 
-        # Discord
-        ([mod], "d", lazy.spawn("discord-canary")),
+        # kdenlive
+        ([mod], "k", lazy.spawn("kdenlive")),
 
         # OBS
         ([mod], "o", lazy.spawn("obs")),
 
         # Slack
-        ([mod], "s", lazy.spawn("slack"))
+        ([mod], "s", lazy.spawn("slack")),
+
+        # Discord
+        ([mod], "d", lazy.spawn("discord")),
     ]
 ]

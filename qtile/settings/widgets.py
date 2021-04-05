@@ -24,8 +24,8 @@ icon = lambda fg='text', bg='dark', fontsize=16, text="?": widget.TextBox(
 powerline = lambda fg="light", bg="dark": widget.TextBox(
    **base(fg, bg),
     text="", # Icon: fa-caret-left
-    fontsize=44,
-    padding=-5
+    fontsize=50,
+    padding=-1
 )
 
 # Funciones para los espacios de trabajo
@@ -67,7 +67,7 @@ primary_widgets = [
 
     #icon(bg="color4", text=''),
     
-    #widget.Pacman(**base(bg='color4'), update_interval=1800),
+    #widget.Pacman(**base(bg='color4'), execute = "pamac-manager", update_interval = 900),
 
     #powerline('color3', 'color4'),
 
