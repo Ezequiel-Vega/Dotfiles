@@ -71,8 +71,8 @@ ZSH_THEME="spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-        git
         zsh-syntax-highlighting
+        git
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -105,6 +105,11 @@ fi
 alias v="nvim"
 alias e="ranger"
 alias r="gio trash"
+alias arch="uname -m"
+alias discover="lshw"
+
+# Plugins ZSH
+source /home/zetta/plugins-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Node Version Manager(NVM)
 export NVM_DIR="$HOME/.nvm"

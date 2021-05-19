@@ -1,5 +1,5 @@
 xrandr --output VGA1 --mode 1360x768 --pos 0x0
-feh --bg-scale Descargas/abstract.png
+feh --bg-scale zetta/git/dotfile/fondo_de_escritorio.png
 nm-applet &
 udiskie -t &
 volumeicon &
